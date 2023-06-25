@@ -35,7 +35,8 @@ export const getStaticProps: GetStaticProps = async () => {
 
     return {
       props: { btcData }
-      // you can add revalidate: number here for ISR (incremental static regeneration)
+      // you can add 'revalidate: number' here for ISR (incremental static regeneration)
+      // if we want to regenerate the page every X increment
     };
   } catch (error) {
     console.error(`Error fetching BTC addresses`);
